@@ -27,7 +27,12 @@ namespace Cheers
 			Console.WriteLine("{0} is GRAND", name);
 			Console.ReadLine();
 
+			Console.WriteLine ("When yo birfday is!?");
+			var bday = Console.ReadLine ();
+			DateTime thisDate = Convert.ToDateTime(bday);
+			Console.WriteLine(thisDate.ToShortDateString()); 
 		}
+
 
 	}
 }
