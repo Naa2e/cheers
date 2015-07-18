@@ -7,8 +7,8 @@ namespace Cheers
 		public static void Main (string[] args)
 		{
 			Console.WriteLine ("Whach yo name is!?");
-			var name = Console.ReadLine ().ToUpper ();
-			var anLetters = "AEFHILMNORSX";	
+			string name = Console.ReadLine ().ToUpper ();
+			string anLetters = "AEFHILMNORSX";	
 			foreach (char c in name) 
 			{
 				if (anLetters.Contains(c))
