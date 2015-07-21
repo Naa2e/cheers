@@ -32,7 +32,17 @@ namespace Cheers
 			double daysAgo = conversion.TotalDays;
 			Console.WriteLine(daysAgo);
 
-			TimeSpan now = DateTime.Now.Add(DateTime.Parse(bday));
+			int difference = 0; 
+
+			//DateTime conversion2 = DateTime.Now.Add(DateTime.Parse(bday));
+			DateTime lastDay = new DateTime(2015,12,31);
+			if (DateTime.Today < DateTime.Parse(bday)) {
+				difference = DateTime.Parse(bday).DayOfYear - DateTime.Today.DayOfYear;
+				
+			} else {
+			difference = lastDay.DayOfYear - DateTime.Today.DayOfYear + DateTime.Parse(bday).DayOfYear;
+			}
+
 
 
 			//TimeSpan convert2 = DateTime.Now.AddDays(DateTime.Parse(bday));
@@ -51,10 +61,10 @@ namespace Cheers
 			//Console.WriteLine("{0} was {1} days ago", DateTime.Parse(bday),daysAgo.ToString("0"));
 
 			//Console.WriteLine(Convert.ToDateTime(conversion));
-			//Console.WriteLine("Your birfday is in ", today.Subtract(thisDate), "days");
+			Console.WriteLine("Your birfday is in {0} days ", difference);
 
 
-	}
+}
 }
 
 }
