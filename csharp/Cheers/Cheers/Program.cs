@@ -27,16 +27,29 @@ namespace Cheers
 				else Console.WriteLine("Give me a {0}", c);
 			}
 			Console.WriteLine("{0} is GRAND", name);
-			Console.ReadLine();
-			Console.WriteLine(bday);
 
 			TimeSpan conversion = DateTime.Now.Subtract(DateTime.Parse(bday));
-			Console.WriteLine(conversion);
-
 			double daysAgo = conversion.TotalDays;
-			Console.WriteLine("{0} was {1} days ago",
-				DateTime.Parse(bday),
-				daysAgo.ToString("0"));
+			Console.WriteLine(daysAgo);
+
+			TimeSpan now = DateTime.Now.Add(DateTime.Parse(bday));
+
+
+			//TimeSpan convert2 = DateTime.Now.AddDays(DateTime.Parse(bday));
+			//double daysUntil = convert2.TotalDays;
+
+			//string a = String.Concat(DateTime.Parse(bday), " was ", daysAgo.ToString());
+				//Console.WriteLine(a);
+
+			//string b = String.Concat(DateTime.Parse (bday), " is in ", );
+			//string b = "{0} was {1} days ago", DateTime.Parse(bday),daysUntil.ToString("0"));
+
+			//int value = daysAgo.ToString() == "0" ? a : b;
+
+			//Console.WriteLine(value);
+
+			//Console.WriteLine("{0} was {1} days ago", DateTime.Parse(bday),daysAgo.ToString("0"));
+
 			//Console.WriteLine(Convert.ToDateTime(conversion));
 			//Console.WriteLine("Your birfday is in ", today.Subtract(thisDate), "days");
 
